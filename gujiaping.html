@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Parcel Sandbox</title>
+	<meta charset="UTF-8" />
+	<style>
+		:root {
+			--loading-gray: #ededed
+		}
+		body {
+			background-color: #f6f6f6;
+			font-family: Helvetica;
+			font-size: 25px
+		}
+		.card {
+			width: 320px;
+			background-color: #fff;
+			border-radius: 6px;
+			overflow: hidden
+		}
+		.image {
+			height: 200px;
+		}
+    .content {
+      padding:2rem 1.8rem;
+    }
+    h4 {
+      margin: 0 0 1rem;
+      font-size: 1.5rem;
+
+    }
+		.loading .image,
+		.loading h4,
+		.loading .desc {
+			/* background-color: var(--loading-gray);
+      background: linear-gradient(
+        100deg,
+        rgba(255,255,255,0) 40%,
+        rgba(255,255,255,.5) 50%,
+        rgba(255,255,255,0) 60%,
+      ) var(--loading-gray) */
+      background:linear-gradient(
+        100deg,
+        rgba(255,255,255,0) 40%,
+        rgba(255,255,255,.5) 50%,
+        rgba(255,255,255,0) 60%
+      ) var(--loading-gray);
+      background-size: 200% 100%;
+      background-position-x: 180%;
+      animation:loading 1s infinite;
+		}
+		.loading h4 {
+			min-height: 1.6rem;
+			border-radius: 4px;
+      animation-delay: .05s;
+		}
+		.loading .desc {
+			min-height: 4rem;
+			border-radius: 4px;
+      animation-delay: .06s;
+
+		}
+    @keyframes loading {
+      to {
+        background-position-x: -20%;
+      }
+    }
+	</style>
+</head>
+
+<body>
+	<!-- <div id="app"></div> -->
+
+	<!-- <script src="src/index.js"> -->
+		<div class='card loading'>
+			<div class='image '>
+
+			</div>
+			<div class='content'>
+				<h4></h4>
+				<div class='desc'></div>
+			</div>
+		</div>
+	</script>
+</body>
+
+</html>
